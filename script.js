@@ -55,10 +55,10 @@ let photoIndex = 0;
 
 function startSlideshow() {
     slideshow.style.display = "flex";
-
+    slideImg.style.opacity = "1";
     slideImg.src = photos[photoIndex];
 
-    setInterval(() => {
+    function showNextPhoto() {
         slideImg.style.opacity = "0";
 
         setTimeout(() => {
@@ -67,8 +67,12 @@ function startSlideshow() {
             slideImg.style.opacity = "1";
         }, 800);
 
-    }, 3500);
+        setTimeout(showNextPhoto, 4000);
+    }
+
+    setTimeout(showNextPhoto, 4000);
 }
+
 
 
 yesBtn.addEventListener("click", () => {

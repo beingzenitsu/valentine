@@ -73,7 +73,6 @@ button {
     max-width: 800px;
     border-radius: 20px;
     box-shadow: 0 0 60px rgba(0,0,0,0.8);
-    transition: opacity 0.8s ease;
+    transition: opacity 0.8s ease-in-out;
 }
-
 
