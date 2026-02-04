@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 48px;
+    color: white;
+    text-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+button {
+    padding: 15px 35px;
+    font-size: 24px;
+    margin: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background: #ff4d6d;
+    color: white;
+    box-shadow: 0 0 20px #ff4d6d;
+}
+
+#noBtn {
+    background: #333;
+    color: white;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+#snowball {
+    animation: popUp 1s ease forwards;
+}
+
+#snowball img {
+    width: 280px;
+    margin-top: 20px;
+}
+
+#snowball h2 {
+    color: white;
+    font-size: 30px;
+}
+
+@keyframes popUp {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Floating hearts */
+.hearts::before,
+.hearts::after {
+    content: "💗 💖 💕 💘 💝";
+    position: absolute;
+    font-size: 24px;
+    animation: floatHearts 10s linear infinite;
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(100vh); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
