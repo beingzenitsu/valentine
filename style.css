@@ -15,25 +15,23 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 42px;
     color: white;
-    text-shadow: 0 0 20px rgba(255,255,255,0.8);
+    text-shadow: 0 0 20px rgba(255,255,255,0.9);
 }
 
 button {
     padding: 15px 35px;
-    font-size: 24px;
+    font-size: 22px;
     margin: 15px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 #yesBtn {
     background: #ff4d6d;
     color: white;
-    box-shadow: 0 0 20px #ff4d6d;
 }
 
 #noBtn {
@@ -51,13 +49,8 @@ button {
 }
 
 #snowball img {
-    width: 280px;
+    width: 260px;
     margin-top: 20px;
-}
-
-#snowball h2 {
-    color: white;
-    font-size: 30px;
 }
 
 @keyframes popUp {
@@ -65,17 +58,22 @@ button {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Floating hearts */
-.hearts::before,
-.hearts::after {
-    content: "💗 💖 💕 💘 💝";
-    position: absolute;
-    font-size: 24px;
-    animation: floatHearts 10s linear infinite;
+#slideshow {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
 }
 
-@keyframes floatHearts {
-    0% { transform: translateY(100vh); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateY(-10vh); opacity: 0; }
+#slideImg {
+    width: 70%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 0 60px rgba(0,0,0,0.8);
+    transition: opacity 0.8s ease;
 }
+
+
