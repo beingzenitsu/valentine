@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Be My Valentine ❤️</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Be My Valentine ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="hearts"></div>
+<div id="hearts-layer"></div>
 
-    <div class="container">
-        <h1 id="typeText"></h1>
-        <h1 id="question" class="hidden">Will you be my Valentine? ❤️</h1>
+<div class="container">
+  <div id="intro">
+    <h1 id="typeText"></h1>
 
-        <div class="buttons">
-            <button id="yesBtn">Yes 💖</button>
-            <button id="noBtn">No 😢</button>
-        </div>
+    <h1 id="question" class="hidden">
+      Will you be my Valentine? ❤️
+    </h1>
 
-        <div id="snowball" class="hidden">
-            <img src="snowball.jpg" alt="Snowball">
-            <h2>Thank you for saying YES! I love you endlessly 🐰❤️</h2>
-        </div>
+    <div class="buttons">
+      <button id="yesBtn">Yes 💖</button>
+      <button id="noBtn">No 😢</button>
     </div>
 
-    <div id="slideshow" class="hidden">
-       <img id="slideImg" src="photo1.jpg" alt="memory">
+    <div id="snowball" class="hidden">
+      <img src="snowball.jpg">
+      <h2>Thank you for saying YES! I love you endlessly 🐰❤️</h2>
     </div>
+  </div>
+</div>
 
-    <audio id="bgMusic" src="love.mp3"></audio>
+<div id="slideshow" class="hidden">
+  <img id="slideImg" src="photo1.jpg">
+</div>
 
-    <script src="script.js"></script>
+<div id="loveText"></div>
+
+<button id="pauseBtn">⏸</button>
+<audio id="bgMusic" src="love.mp3"></audio>
+<audio id="endingMusic" src="ending.mp3"></audio>
+
+
+<div id="ending">
+  <div id="endingText">
+    And in every lifetime…<br>
+    I’ll still choose you ❤️
+  </div>
+</div>
+
+<div id="constellation">
+  <div id="centerLove">I love you babyy 🌹</div>
+</div>
+
+<div id="ending2" class="ending-screen">
+  If love could be seen,<br>it would look like this.
+</div>
+
+<div id="ending3" class="ending-screen">
+  Wait Chinooo…
+</div>
+
+<div id="starMessage"></div>
+
+<div id="finalEnding">
+  <div id="finalText"></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
