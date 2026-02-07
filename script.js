@@ -18,7 +18,7 @@ let slideshowInterval,loveInterval,heartInterval;
 let paused = false;
 let slideTimeout = null;
 
-const CLIMAX_TIME=126;
+const CLIMAX_TIME=130;
 
 const message = "Lavanya Singh (Chinoooooo) ❤️\n\nIn a world full of noise and uncertainty,\nyou became my peace, my home, and my safest feeling.";
 
@@ -49,15 +49,23 @@ function startSlideshow(){
   
   pauseBtn.style.display = "block";
 
-  slideshowInterval=setInterval(()=>{
+  slideshowInterval = setInterval(() => {
+    if (paused) return;
+
     slideImg.classList.remove("show");
-    setTimeout(()=>{
-      photoIndex=(photoIndex+1)%photos.length;
-      slideImg.src=photos[photoIndex];
+
+    const nextIndex = (photoIndex + 1) % photos.length;
+    const nextImage = new Image();
+    nextImage.src = photos[nextIndex];
+
+    nextImage.onload = () => {
+      photoIndex = nextIndex;
+      slideImg.src = nextImage.src;
       slideImg.classList.add("show");
-    },900);
-  },4500);
-}
+    };
+
+  }, 5000);
+} 
 
 const loveLines = [
 "Loving you feels like finally being understood.",
