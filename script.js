@@ -18,7 +18,7 @@ let slideshowInterval,loveInterval,heartInterval;
 let paused = false;
 let slideTimeout = null;
 
-const CLIMAX_TIME=130;
+const CLIMAX_TIME=140;
 
 const message = "Lavanya Singh (Chinoooooo) ❤️\n\nIn a world full of noise and uncertainty,\nyou became my peace, my home, and my safest feeling.";
 
